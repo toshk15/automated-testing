@@ -6,4 +6,4 @@ def subtract(a, b):
 
 if __name__ == "__main__":
   print(add())
-  print(subtract))
+  print(subtract())
