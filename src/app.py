@@ -12,15 +12,15 @@ def shellSort(arr):
     interval = len(arr) // 2
     while interval > 0:
         for i in range(interval, len(arr)):
-            temp = array[i]
+            temp = arr[i]
             j = i
-            while j >= 0 and array[j - interval] > temp:
-                array[j] = array[j - interval]
+            while j >= 0 and arr[j - interval] > temp:
+                array[j] = arr[j - interval]
                 j -= interval
             
-            array[j] = temp
+            arr[j] = temp
         interval //= 2
-    return array
+    return arr
     
 
 
