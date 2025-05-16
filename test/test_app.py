@@ -1,11 +1,6 @@
-from src.app import add, subtract
+from src.app import selectionSort
 
-def test_add_function():
-    assert add(2, 3) == 5
-    assert add(0, 0) == 0
-    assert add(5, 5) == 10
+def test_selectionSort_function():
+    assert selectionSort([10, 30, 3, 6, 1, 23]) == [1, 3, 6, 10, 23, 30]
+ 
 
-def test_subtarct_function():
-    assert subtract(5, 3) == 2
-    assert subtract(0, 0) == 0
-    assert subtract(10, 5) == 5
