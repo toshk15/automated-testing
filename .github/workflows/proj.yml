@@ -34,7 +34,7 @@ jobs:
         # Simulate build output by creating a file
         #touch build/output_file.txt
         mkdir -p test-results coverage-report
-        pytest --junitxml=test-results/results.xml --cov=app --cov-report=html:coverage-report
+        pytest --junitxml=test-results/results.xml --cov=src.app --cov-report=html:coverage-report
 
     # Run tests using pytest
     #- name: Run tests
