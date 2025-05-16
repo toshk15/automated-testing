@@ -1,4 +1,4 @@
-from src.main import add, subtract
+from src.app import add, subtract
 
 def test_add_function():
     assert add(2, 3) == 5
