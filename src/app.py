@@ -14,7 +14,7 @@ def shellSort(arr):
         for i in range(interval, len(arr)):
             temp = arr[i]
             j = i
-            while j >= 0 and arr[j - interval] > temp:
+            while j >= interval and arr[j - interval] > temp:
                 arr[j] = arr[j - interval]
                 j -= interval
             
@@ -26,8 +26,7 @@ def shellSort(arr):
 
 if __name__ == "__main__":
 
-    arr = [10, 30, 3, 6, 1, 23]
-    
+    arr = [10, 30, 3, 6, 1, 23]    
     print(selectionSort(arr))
     print(shellSort(arr))
 
