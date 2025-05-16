@@ -13,7 +13,7 @@ def shellSort(arr):
     while interval > 0:
         for i in range(interval, len(arr)):
             temp = array[i]
-            j = if
+            j = i
             while j >= 0 and array[j - interval] > temp:
                 array[j] = array[j - interval]
                 j -= interval
