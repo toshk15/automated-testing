@@ -25,8 +25,7 @@ def shellSort(arr):
 
 
 if __name__ == "__main__":
+    pass
+    
 
-    arr = [10, 30, 3, 6, 1, 23]    
-    print(selectionSort(arr))
-    print(shellSort(arr))
 

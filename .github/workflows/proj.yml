@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,28 +27,22 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    # Build (this project deosn't require a build but we will simulate a build by creating a file)
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # run test cases
     - name: Build Project
-      run: |
-        #mkdir -p build
-        # Simulate build output by creating a file
-        #touch build/output_file.txt
+      run: |     
         mkdir -p test-results coverage-report
         pytest --junitxml=test-results/results.xml --cov=src.app --cov-report=html:coverage-report
 
-    # Run tests using pytest
-    #- name: Run tests
-    #  run: 
-    #    pytest
-
-    # Upload the build output as an artifact (we created a file in the build step to simulate an artifact)
+    #upload artifacts
     - name: Upload build artifact
       uses: actions/upload-artifact@v4
       with:
         name: junit-test-results
-        path: test-results/results.xml
-        #name: build-artifact
-        #path: build/
+        path: test-results/results.xml     
 
     - name: Upload coverage report
       uses: actions/upload-artifact@v4
