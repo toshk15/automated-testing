@@ -1,4 +1,4 @@
-from src.app import selectionSort, shellSort, countSort
+from src.app import selectionSort, shellSort, countSort, insertSort
 
 def test_selectionSort_function():
     assert selectionSort([10, 30, 3, 6, 1, 23]) == [1, 3, 6, 10, 23, 30]
@@ -17,3 +17,7 @@ def test_countSort_function():
  
  
 
+def test_insertSort_function():
+    assert insertSort([10, 30, 3, 6, 1, 23]) == [1, 3, 6, 10, 23, 30]
+    assert insertSort([1, 18, 3, 9, 1, 3]) == [1, 1, 3, 3, 9, 18]
+    assert insertSort([22, 3, 12, 6, 2, 20]) == [2, 3, 6, 12, 20, 22]
