@@ -41,11 +41,21 @@ def countSort(arr):
             cr[j]-=1
         else:
             j+=1
+    return arr    
+
+
+def insertSort(arr):
+
+    for i in range(1, len(arr)):
+        j = i - 1
+        aux = arr[i]
+
+        while j >= 0 and aux < arr[j]:
+            arr[j+1] = arr[j]
+            j-=1
+        arr[j+1] = aux
+
     return arr
-
-
-    
-
 
 if __name__ == "__main__":
     pass

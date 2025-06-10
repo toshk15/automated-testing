@@ -15,8 +15,6 @@ def test_countSort_function():
     assert countSort([1, 18, 3, 9, 1, 3]) == [1, 1, 3, 3, 9, 18]
     assert countSort([22, 3, 12, 6, 2, 20]) == [2, 3, 6, 12, 20, 22]
  
- 
-
 def test_insertSort_function():
     assert insertSort([10, 30, 3, 6, 1, 23]) == [1, 3, 6, 10, 23, 30]
     assert insertSort([1, 18, 3, 9, 1, 3]) == [1, 1, 3, 3, 9, 18]
