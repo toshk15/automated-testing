@@ -9,8 +9,9 @@ def bubbleSort(arr):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
                 flag = True
-            if flag == False:
-                break
+        if flag == False:
+            break
+            
     return arr
 
 
